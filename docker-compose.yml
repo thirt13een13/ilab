@@ -1,0 +1,91 @@
+version: '3.8'
+
+services:
+
+  ohms-law:
+    build: ./docker/experiments/ohms-law
+    container_name: ilab-ohms-law
+    ports: ["3001:3000"]
+    restart: unless-stopped
+    networks: [ilab-net]
+
+  hookes-law:
+    build: ./docker/experiments/hookes-law
+    container_name: ilab-hookes-law
+    ports: ["3002:3000"]
+    restart: unless-stopped
+    networks: [ilab-net]
+
+  simple-pendulum:
+    build: ./docker/experiments/simple-pendulum
+    container_name: ilab-simple-pendulum
+    ports: ["3003:3000"]
+    restart: unless-stopped
+    networks: [ilab-net]
+
+  capacitor-charging:
+    build: ./docker/experiments/capacitor-charging
+    container_name: ilab-capacitor-charging
+    ports: ["3004:3000"]
+    restart: unless-stopped
+    networks: [ilab-net]
+
+  photoelectric-effect:
+    build: ./docker/experiments/photoelectric-effect
+    container_name: ilab-photoelectric-effect
+    ports: ["3005:3000"]
+    restart: unless-stopped
+    networks: [ilab-net]
+
+  acid-base-titration:
+    build: ./docker/experiments/acid-base-titration
+    container_name: ilab-acid-base-titration
+    ports: ["3006:3000"]
+    restart: unless-stopped
+    networks: [ilab-net]
+
+  electrolysis-water:
+    build: ./docker/experiments/electrolysis-water
+    container_name: ilab-electrolysis-water
+    ports: ["3007:3000"]
+    restart: unless-stopped
+    networks: [ilab-net]
+
+  enthalpy-neutralisation:
+    build: ./docker/experiments/enthalpy-neutralisation
+    container_name: ilab-enthalpy-neutralisation
+    ports: ["3008:3000"]
+    restart: unless-stopped
+    networks: [ilab-net]
+
+  osmosis-potato:
+    build: ./docker/experiments/osmosis-potato
+    container_name: ilab-osmosis-potato
+    ports: ["3009:3000"]
+    restart: unless-stopped
+    networks: [ilab-net]
+
+  photosynthesis-rate:
+    build: ./docker/experiments/photosynthesis-rate
+    container_name: ilab-photosynthesis-rate
+    ports: ["3010:3000"]
+    restart: unless-stopped
+    networks: [ilab-net]
+
+  density-measurement:
+    build: ./docker/experiments/density-measurement
+    container_name: ilab-density-measurement
+    ports: ["3011:3000"]
+    restart: unless-stopped
+    networks: [ilab-net]
+
+  heat-transfer:
+    build: ./docker/experiments/heat-transfer
+    container_name: ilab-heat-transfer
+    ports: ["3012:3000"]
+    restart: unless-stopped
+    networks: [ilab-net]
+
+networks:
+  ilab-net:
+    driver: bridge
